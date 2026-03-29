@@ -1,6 +1,10 @@
 # 🧩 PuzzleHouse
 
+[![Live](https://img.shields.io/badge/Live-Website-green)](https://puzzlehouse.netlify.app)
+
 A TUI-themed web puzzle game built with Next.js. Solve puzzles, earn coins, and decorate your virtual room with pixel art collectibles.
+
+🔗 **Play Live:** [puzzlehouse.netlify.app](https://puzzlehouse.netlify.app)
 
 ## 🎮 Features
 
