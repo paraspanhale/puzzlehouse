@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #0a0a0a;
+    color: #e5e5e5;
+  }
+
+  body {
+    @apply bg-tui-bg text-tui-fg font-mono antialiased;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-tui-accent text-tui-bg;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-tui-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-tui-border rounded;
+  }
+}
+
+@layer components {
+  .tui-card {
+    @apply bg-tui-bg border border-tui-border p-4 rounded;
+  }
+
+  .tui-card-hover {
+    @apply tui-card hover:border-tui-accent cursor-pointer transition-colors;
+  }
+
+  .tui-button {
+    @apply px-4 py-2 bg-tui-border text-tui-fg hover:bg-tui-accent hover:text-tui-bg transition-colors rounded border border-tui-border;
+  }
+
+  .tui-button-primary {
+    @apply px-4 py-2 bg-tui-fg text-tui-bg hover:bg-tui-accent transition-colors rounded border border-tui-fg font-semibold;
+  }
+
+  .tui-input {
+    @apply w-full px-3 py-2 bg-tui-bg border border-tui-border rounded text-tui-fg focus:border-tui-accent focus:outline-none;
+  }
+
+  .tui-border-box {
+    @apply border border-tui-border p-3;
+  }
+
+  .blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .scanlines {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  }
+}
