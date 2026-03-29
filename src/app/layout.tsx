@@ -4,6 +4,9 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "PuzzleHouse - Train Your Brain",
   description: "Solve puzzles, earn coins, decorate your room",
+  verification: {
+    google: "g6cdLvChw1e4hDNIJU9Nu7UZwOSyogwWRz12DGLtWBI",
+  },
 };
 
 export default function RootLayout({
